@@ -1,0 +1,15 @@
+package utilities;
+
+import java.io.FileInputStream;
+
+public class PropertiesManager {
+
+	public static void configProp()
+	{
+		FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\congig.properties");
+		
+		
+	}
+	
+	
+}

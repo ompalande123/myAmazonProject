@@ -1,0 +1,14 @@
+package testRunner;
+
+import io.cucumber.testng.CucumberOptions;
+
+public class TestRunner {
+	
+	@CucumberOptions(
+			features="src/test/java/scenarios",
+			glue="stepDefinitions"
+			)
+	public class TestRunner extends AbstractTestNGCucumberTests{
+	
+
+}

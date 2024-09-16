@@ -1,0 +1,21 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage{
+	
+	WebDriver driver;
+	
+	// This page class have 3 main parts
+	//1. Constructor
+	LoginPage(WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+
+	
+	
+}
