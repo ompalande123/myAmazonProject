@@ -1,27 +1,8 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: List of scenarios.
-#Scenario: Business rule through list of steps with arguments.
-#Given: Some precondition step
-#When: Some key actions
-#Then: To observe outcomes or validation
-#And,But: To enumerate more Given,When,Then steps
-#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
-#Examples: Container for s table
-#Background: List of steps run before each of the scenarios
-#""" (Doc Strings)
-#| (Data Tables)
-#@ (Tags/Labels):To group Scenarios
-#<> (placeholder)
-#""
-## (Comments)
-#Sample Feature Definition Template
-
 
 Feature: Login Feature
   This is my login feature file
 
-  @tag1
+  @Valid_login
   Scenario: Login with valid credentials
     Given the user is on amazon home page
     When user click on signIn button from home page
@@ -29,3 +10,13 @@ Feature: Login Feature
     Then user is navigated to home page
     And user quits the browser
 
+	@Check_Amazon_Pay_Balance
+	Scenario: User wants to check amazon pay balance
+	Given the user is on amazon home page
+	When user click on signIn button from home page
+  And user enters valid credentials
+  Then user is navigated to home page
+  And user clicks on Amazon Pay option from menu bar
+  And user checks the balance
+  Then user quits the browser
+    

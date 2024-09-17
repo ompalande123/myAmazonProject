@@ -25,6 +25,15 @@ public class ManageWaits {
 		element.click();
 	}
 	
+	//explit wait for visibility of element only
+	public static void isVisible(WebDriver driver, WebElement element, int timeout)
+	{
+		new WebDriverWait(driver,Duration.ofSeconds(timeout)).until(ExpectedConditions.visibilityOf(element));
+		
+	}
+	
+	
+	
 	//explicit wait to handle sendKeys with visibilityOf element
 	public static void sendKeysAfterVisible(WebDriver driver, WebElement element, int timeout, String value)
 	{

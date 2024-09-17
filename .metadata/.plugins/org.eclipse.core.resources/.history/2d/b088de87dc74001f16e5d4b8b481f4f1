@@ -1,0 +1,23 @@
+package stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+
+import pages.HomePage;
+import utilities.DriverFactory;
+
+public class HomePageSteps {
+
+	private WebDriver driver;
+	
+	private HomePage homePage;
+	
+	public HomePageSteps()
+	{
+		this.driver=DriverFactory.getDriver();
+		homePage=new HomePage(DriverFactory.getDriver());
+	}
+	
+	
+	
+	
+}
