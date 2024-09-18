@@ -1,0 +1,8 @@
+appURL=https://www.amazon.in/
+page_load_timeout=100
+elementToBeClickableTimeout=20
+elementToBeVisibleTimeout=20
+
+
+
+

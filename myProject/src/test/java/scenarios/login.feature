@@ -1,22 +1,20 @@
+Feature: Login tests
+  This is login feature file to track login related scenarios
 
-Feature: Login Feature
-  This is my login feature file
+  @valid_user
+  Scenario: with valid credentials
+    Given user is navigated to amazon home page
+    And user clicks on signIn button
+    And user entered valid username "ompalande123@gmail.com" and password "Nevergiveup@2024"
+    And user clicked on submit button
+    And user is logged in successfully on dashboard page
 
-  @Valid_login
-  Scenario: Login with valid credentials
-    Given the user is on amazon home page
-    When user click on signIn button from home page
-    And user enters valid credentials
-    Then user is navigated to home page
-    And user quits the browser
-
-	@Check_Amazon_Pay_Balance
-	Scenario: User wants to check amazon pay balance
-	Given the user is on amazon home page
-	When user click on signIn button from home page
-  And user enters valid credentials
-  Then user is navigated to home page
-  And user clicks on Amazon Pay option from menu bar
-  And user checks the balance
-  Then user quits the browser
-    
+  @check_amazon_pay_balance
+  Scenario: user wants to check pay balance
+    Given user is navigated to amazon home page
+    And user clicks on signIn button
+    And user entered valid username "ompalande123@gmail.com" and password "Nevergiveup@2024"
+    And user clicked on submit button
+    And user is logged in successfully on dashboard page
+    And user selects amazon pay option from from dashboard
+    And user checks the balance

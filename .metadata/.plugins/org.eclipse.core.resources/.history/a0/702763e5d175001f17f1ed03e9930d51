@@ -1,0 +1,20 @@
+package base;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeSuite;
+
+import utilities.PropertiesManager;
+
+public class TestBase {
+	
+	
+	@BeforeSuite
+	public int pageLoadTimeout() throws IOException
+	{
+		String pageTimeout=PropertiesManager.configProp().getProperty("page_load_timeout");
+		int timeOut=Integer.valueOf(pageTimeout);
+		return timeOut;
+	}
+
+}

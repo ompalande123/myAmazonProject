@@ -1,0 +1,14 @@
+package base;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeSuite;
+
+import utilities.PropertiesManager;
+
+public class TestBase {
+	
+	
+	
+
+}

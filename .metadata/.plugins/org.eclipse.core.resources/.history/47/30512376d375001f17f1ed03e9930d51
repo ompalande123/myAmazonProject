@@ -1,0 +1,20 @@
+package base;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeSuite;
+
+import io.cucumber.java.After;
+import utilities.DriverFactory;
+import utilities.PropertiesManager;
+
+public class TestBase {
+	
+	
+	@After
+	public void afterScenario()
+	{
+		DriverFactory.quitDriver();
+	}
+
+}

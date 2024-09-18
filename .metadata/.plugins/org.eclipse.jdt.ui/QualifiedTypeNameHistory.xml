@@ -9,7 +9,7 @@
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
-    <fullyQualifiedTypeName name="utilities.PropertiesManager"/>
     <fullyQualifiedTypeName name="utilities.DriverFactory"/>
     <fullyQualifiedTypeName name="utilities.ManageWaits"/>
+    <fullyQualifiedTypeName name="utilities.PropertiesManager"/>
 </qualifiedTypeNameHistroy>

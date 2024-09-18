@@ -1,42 +1,40 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.And;
 import pages.HomePage;
 import utilities.DriverFactory;
 import utilities.ManageWaits;
+import utilities.PropertiesManager;
 
 public class HomePageSteps {
 
 	private WebDriver driver;
-	
+
 	private HomePage homePage;
-	
-	public HomePageSteps()
-	{
-		this.driver=DriverFactory.getDriver();
-		homePage=new HomePage(DriverFactory.getDriver());
+
+	private long timeout;
+
+	public HomePageSteps() throws IOException {
+		this.driver = DriverFactory.getDriver();
+		homePage = new HomePage(DriverFactory.getDriver());
+
+		String strTimeout = PropertiesManager.configProp().getProperty("timeout");
+		this.timeout = Long.valueOf(strTimeout);
 	}
-	
-	
-	@And("user clicks on Amazon Pay option from menu bar")
-	public void user_clicks_on_amazon_pay()
-	{
-		ManageWaits.clickOnAfterVisible(driver, homePage.clickAmazonPay(), 10);
+
+	@And("user selects amazon pay option from from dashboard")
+	public void user_selects_amazonPay_option() {
+		ManageWaits.clickOnAfterVisible(driver, homePage.clickAmazonPay(), timeout);
 	}
-	
-	
+
 	@And("user checks the balance")
-	public void user_checks_the_balance()
-	{
-		ManageWaits.isVisible(driver, homePage.amazonPayBalance(), 10);
-		String myBalance=homePage.amazonPayBalance().getText();
-		System.out.println("My balance = "+myBalance);
-	
+	public void user_checks_the_balance() {
+		ManageWaits.isVisible(driver, homePage.amazonPayBalance(), timeout);
+
 	}
-	
-	
-	
-	
+
 }

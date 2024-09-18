@@ -19,14 +19,14 @@ public class ManageWaits {
 	
 	
 	// explicit wait to handle click action with visibilityOf element
-	public static void clickOnAfterVisible(WebDriver driver, WebElement element, int timeout)
+	public static void clickOnAfterVisible(WebDriver driver, WebElement element, long timeout)
 	{
 		new WebDriverWait(driver,Duration.ofSeconds(timeout)).until(ExpectedConditions.visibilityOf(element));
 		element.click();
 	}
 	
 	//explit wait for visibility of element only
-	public static void isVisible(WebDriver driver, WebElement element, int timeout)
+	public static void isVisible(WebDriver driver, WebElement element, long timeout)
 	{
 		new WebDriverWait(driver,Duration.ofSeconds(timeout)).until(ExpectedConditions.visibilityOf(element));
 		
@@ -35,7 +35,7 @@ public class ManageWaits {
 	
 	
 	//explicit wait to handle sendKeys with visibilityOf element
-	public static void sendKeysAfterVisible(WebDriver driver, WebElement element, int timeout, String value)
+	public static void sendKeysAfterVisible(WebDriver driver, WebElement element, long timeout, String value)
 	{
 		new WebDriverWait(driver,Duration.ofSeconds(timeout)).until(ExpectedConditions.visibilityOf(element));
 		element.sendKeys(value);

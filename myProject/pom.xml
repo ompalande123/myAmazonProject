@@ -7,6 +7,10 @@
   <artifactId>myProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
+
+
+
+
   <name>myProject</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -112,6 +116,14 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.6.1</version>
+        
+        <configuration>
+			<suiteXmlFiles>
+				<suiteXMLFile>testng.xml</suiteXMLFile>
+			</suiteXmlFiles>
+			
+		</configuration>
+        
         </plugin>
       </plugins>
     </pluginManagement>

@@ -1,0 +1,23 @@
+package stepDefinitions;
+
+import java.io.IOException;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import utilities.DriverFactory;
+import utilities.PropertiesManager;
+
+public class Hooks {
+
+	
+	
+	
+	
+	
+	@After
+	public void afterScenario()
+	{
+		DriverFactory.quitDriver();
+	}
+	
+}

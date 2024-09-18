@@ -21,32 +21,24 @@ public class HomePage {
 	// 2. Locators
 	@FindBy(xpath = "//span[@id='nav-link-accountList-nav-line-1']")
 	WebElement signIn;
-	
+
 	@FindBy(xpath = "//a[normalize-space()='Amazon Pay']")
 	WebElement link_AmazonPay;
-	
+
 	@FindBy(xpath = "//span[@class='currency-green']")
 	WebElement amazonPayBalance;
-	
-	
-	
-	
 
 	// 3. Action Methods
 	public WebElement clickSignIn() {
 		return signIn;
 	}
-	
-	public WebElement clickAmazonPay()
-	{
+
+	public WebElement clickAmazonPay() {
 		return link_AmazonPay;
 	}
-	
-	public WebElement amazonPayBalance()
-	{
+
+	public WebElement amazonPayBalance() {
 		return amazonPayBalance;
 	}
-	
-	
-	
+
 }
