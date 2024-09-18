@@ -119,7 +119,7 @@
         
         <configuration>
 			<suiteXmlFiles>
-				<suiteXmlFile>testng.xml</suiteXmlFile>
+				<suiteXMLFile>testng.xml</suiteXMLFile>
 			</suiteXmlFiles>
 			
 		</configuration>
